@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Cadastrar Tutor</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-auth fundo-patinhas">
+
+<div>
+  <div class="logotipo-topo">
+    <div class="logotipo-circulo"><img src="../src/logo.png" alt="Creche Pet"></div>
+  </div>
+  <div class="cartao-auth">
+    <h2 class="cartao-auth-titulo">Cadastrar Tutor</h2>
+    <p class="cartao-auth-subtitulo">Preencha os dados para criar uma conta</p>
+    <form id="formulario-cadastro-tutor" onsubmit="realizarCadastroTutor(event)">
+      <div class="campo-formulario">
+        <label>Nome Completo</label>
+        <input id="nome-cadastro-tutor" class="input-padrao" type="text" placeholder="Digite seu nome" required>
+      </div>
+      <div class="campo-formulario">
+        <label>CPF</label>
+        <input id="cpf-cadastro-tutor" class="input-padrao" type="text" placeholder="000.000.000-00" required>
+      </div>
+      <div class="campo-formulario">
+        <label>Telefone</label>
+        <input id="telefone-cadastro-tutor" class="input-padrao" type="text" placeholder="(11) 98765-4321" required>
+      </div>
+      <div class="campo-formulario">
+        <label>Endereço</label>
+        <input id="endereco-cadastro-tutor" class="input-padrao" type="text" placeholder="Rua, número - Cidade, Estado" required>
+      </div>
+      <div class="campo-formulario">
+        <label>Email</label>
+        <input id="email-cadastro-tutor" class="input-padrao" type="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="campo-formulario">
+        <label>Senha</label>
+        <input id="senha-cadastro-tutor" class="input-padrao" type="password" placeholder="Crie uma senha" required>
+      </div>
+      <button type="submit" class="botao-primario">Cadastrar</button>
+      <p class="mensagem-status sucesso" id="mensagem-cadastro-tutor"></p>
+    </form>
+    <p class="rodape-link">Já tem conta? <a href="login.html">Entrar</a></p>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+</body>
+</html>

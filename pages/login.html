@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Entrar</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-auth fundo-patinhas">
+
+<div>
+  <div class="logotipo-topo">
+    <div class="logotipo-circulo"><img src="../src/logo.png" alt="Creche Pet"></div>
+  </div>
+  <div class="cartao-auth">
+    <h2 class="cartao-auth-titulo">Entrar</h2>
+    <p class="cartao-auth-subtitulo">Acesse sua conta para continuar</p>
+    <form id="formulario-login" onsubmit="realizarLogin(event)">
+      <div class="campo-formulario">
+        <label>Email</label>
+        <input id="email-login" class="input-padrao" type="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="campo-formulario">
+        <label>Senha</label>
+        <input id="senha-login" class="input-padrao" type="password" placeholder="Digite sua senha" required>
+      </div>
+      <a class="esqueceu-senha">Esqueceu a senha?</a>
+      <button type="submit" class="botao-primario">Entrar</button>
+      <p class="mensagem-status erro" id="mensagem-login"></p>
+    </form>
+    <p class="rodape-link">Não tem conta? <a href="escolha-perfil.html">Criar conta</a></p>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>preencherUltimoEmail('email-login');</script>
+</body>
+</html>

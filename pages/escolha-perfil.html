@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Escolha de perfil</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-auth fundo-patinhas">
+
+<div>
+  <div class="logotipo-topo">
+    <div class="logotipo-circulo"><img src="../src/logo.png" alt="Creche Pet"></div>
+  </div>
+  <div class="cartao-auth">
+    <div class="escolha-perfil-cabecalho">
+      <h2>Criar Conta</h2>
+      <p>Como você deseja usar a plataforma?</p>
+    </div>
+    <div class="opcoes-perfil">
+      <div class="cartao-opcao-perfil" onclick="escolherPerfil('tutor')">
+        <div class="circulo-icone-opcao"><img src="../src/icone-pata.png" alt="Dono de Pet"></div>
+        <h3>Dono de Pet</h3>
+        <p>Quero cuidar do meu pet</p>
+      </div>
+      <div class="cartao-opcao-perfil" onclick="escolherPerfil('profissional')">
+        <div class="circulo-icone-opcao"><img src="../src/icone-coracao.png" alt="Profissional Acolhedor"></div>
+        <h3>Profissional Acolhedor</h3>
+        <p>Quero oferecer creche</p>
+      </div>
+    </div>
+    <p class="rodape-link">Já tem conta? <a href="login.html">Entrar</a></p>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+</body>
+</html>

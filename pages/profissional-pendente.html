@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Conta em análise</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-auth fundo-patinhas">
+
+<div>
+  <div class="logotipo-topo">
+    <div class="logotipo-circulo"><img src="../src/logo.png" alt="Creche Pet"></div>
+  </div>
+  <div class="cartao-auth cartao-pendente">
+    <div class="circulo-ampulheta"><img src="../src/icone-ampulheta.png" alt="Aguardando"></div>
+    <h2 class="cartao-auth-titulo">Conta em análise</h2>
+    <div class="selo-central"><span class="selo selo-azul">Aguardando vínculo</span></div>
+    <p class="texto-pendente">Seu cadastro foi realizado com sucesso! A administração está associando você a uma creche. Aguarde a liberação automática do sistema ou saia e faça o login novamente mais tarde.</p>
+    <button class="botao-primario" onclick="verificarLiberacao()">Verificar liberação</button>
+    <button class="botao-secundario" onclick="voltarAoLoginProfissional()">Sair e voltar ao login</button>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>exigirProfissional();</script>
+</body>
+</html>
