@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Creches disponíveis</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-app">
+
+<header class="barra-superior">
+  <button class="logotipo-app" id="botao-logo"><img src="../src/logo.png" alt="Creche Pet"></button>
+  <div class="area-usuario">
+    <button class="botao-sino" id="botao-sino">
+      <img src="../src/icone-sino.png" alt="Notificações">
+      <div class="painel-notificacoes oculto" id="painel-notificacoes"><strong>Notificações</strong>Nenhuma novidade por enquanto.</div>
+    </button>
+    <span class="nome-usuario-atual" id="nome-usuario"></span>
+    <div class="avatar-usuario" id="avatar-usuario"></div>
+    <button class="botao-logout" id="botao-sair"><img src="../src/icone-sair.png" alt="Sair"></button>
+  </div>
+</header>
+
+<div class="area-conteudo fundo-patinhas">
+  <div class="container-largura">
+    <h1 class="titulo-secao">Creches disponíveis</h1>
+    <p class="subtitulo-secao">Escolha uma creche e agende uma vaga para o seu pet.</p>
+    <div class="lista-creches" id="lista-creches"></div>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>iniciarPaginaCreches();</script>
+</body>
+</html>

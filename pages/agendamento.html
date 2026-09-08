@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Agendar vaga</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-app">
+
+<header class="barra-superior">
+  <button class="logotipo-app" id="botao-logo"><img src="../src/logo.png" alt="Creche Pet"></button>
+  <div class="area-usuario">
+    <button class="botao-sino" id="botao-sino">
+      <img src="../src/icone-sino.png" alt="Notificações">
+      <div class="painel-notificacoes oculto" id="painel-notificacoes"><strong>Notificações</strong>Nenhuma novidade por enquanto.</div>
+    </button>
+    <span class="nome-usuario-atual" id="nome-usuario"></span>
+    <div class="avatar-usuario" id="avatar-usuario"></div>
+    <button class="botao-logout" id="botao-sair"><img src="../src/icone-sair.png" alt="Sair"></button>
+  </div>
+</header>
+
+<div class="area-conteudo fundo-patinhas">
+  <div class="container-largura">
+    <h1 class="titulo-secao">Agendar vaga</h1>
+    <p class="subtitulo-secao">Escolha o pet, a creche e o melhor horário.</p>
+    <div class="cartao-formulario-agendar">
+      <form id="formulario-agendamento" onsubmit="confirmarAgendamento(event)">
+        <div class="campo-formulario">
+          <label>Pet</label>
+          <div class="selecao-personalizada">
+            <select id="select-pet-agendamento" class="input-padrao" required></select>
+            <span class="seta-select"><img src="../src/icone-seta.png" alt=""></span>
+          </div>
+        </div>
+        <div class="campo-formulario">
+          <label>Creche</label>
+          <div class="selecao-personalizada">
+            <select id="select-creche-agendamento" class="input-padrao" required></select>
+            <span class="seta-select"><img src="../src/icone-seta.png" alt=""></span>
+          </div>
+        </div>
+        <div class="campo-formulario linha-dupla">
+          <div>
+            <label>Data</label>
+            <input id="data-agendamento" class="input-padrao" type="date" required>
+          </div>
+          <div>
+            <label>Horário</label>
+            <div class="selecao-personalizada">
+              <select id="select-horario-agendamento" class="input-padrao" required>
+                <option value="08:00 às 18:00">08:00 às 18:00</option>
+                <option value="09:00 às 17:00">09:00 às 17:00</option>
+                <option value="08:30 às 16:00">08:30 às 16:00</option>
+                <option value="10:00 às 18:00">10:00 às 18:00</option>
+              </select>
+              <span class="seta-select"><img src="../src/icone-seta.png" alt=""></span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="botao-primario" id="botao-confirmar-agendamento">Confirmar agendamento</button>
+      </form>
+    </div>
+    <h3 class="titulo-lista">Meus agendamentos</h3>
+    <div id="lista-agendamentos-form"></div>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>iniciarPaginaAgendamento();</script>
+</body>
+</html>

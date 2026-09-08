@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Acompanhamento em tempo real</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-app">
+
+<header class="barra-superior">
+  <button class="logotipo-app" id="botao-logo"><img src="../src/logo.png" alt="Creche Pet"></button>
+  <div class="area-usuario">
+    <button class="botao-sino" id="botao-sino">
+      <img src="../src/icone-sino.png" alt="Notificações">
+      <div class="painel-notificacoes oculto" id="painel-notificacoes"><strong>Notificações</strong>Nenhuma novidade por enquanto.</div>
+    </button>
+    <span class="nome-usuario-atual" id="nome-usuario"></span>
+    <div class="avatar-usuario" id="avatar-usuario"></div>
+    <button class="botao-logout" id="botao-sair"><img src="../src/icone-sair.png" alt="Sair"></button>
+  </div>
+</header>
+
+<div class="area-conteudo fundo-patinhas">
+  <div class="container-largura">
+    <div class="cabecalho-acompanhamento">
+      <div>
+        <h1 class="titulo-secao" style="margin-bottom:2px;">Acompanhamento em tempo real</h1>
+        <p class="subtitulo-secao" style="margin-bottom:0;" id="meta-acompanhamento"></p>
+      </div>
+      <span class="selo-ao-vivo"><span class="ponto-vivo"></span>AO VIVO</span>
+    </div>
+    <div class="linha-tempo-caixa">
+      <div class="linha-tempo-container" id="linha-tempo-lista"></div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>iniciarPaginaAcompanhamento();</script>
+</body>
+</html>
