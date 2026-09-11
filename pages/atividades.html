@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creche Pet — Atividades do agendamento</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="pagina-app">
+
+<header class="barra-superior">
+  <button class="logotipo-app" id="botao-logo"><img src="../src/logo.png" alt="Creche Pet"></button>
+  <div class="area-usuario">
+    <button class="botao-sino" id="botao-sino">
+      <img src="../src/icone-sino.png" alt="Notificações">
+      <div class="painel-notificacoes oculto" id="painel-notificacoes"><strong>Notificações</strong>Nenhuma novidade por enquanto.</div>
+    </button>
+    <span class="nome-usuario-atual" id="nome-usuario"></span>
+    <div class="avatar-usuario" id="avatar-usuario"></div>
+    <button class="botao-logout" id="botao-sair"><img src="../src/icone-sair.png" alt="Sair"></button>
+  </div>
+</header>
+
+<div class="area-conteudo fundo-patinhas">
+  <div class="container-estreito">
+    <h1 class="titulo-secao">Atividades do agendamento</h1>
+    <p class="subtitulo-secao">Incluir as atividades que serão executadas no dia agendado.</p>
+    <div class="cartao-form-central">
+      <div class="cabecalho-cartao-pet" style="margin-bottom:18px;">
+        <div class="avatar-pet"><img src="../src/icone-pata.png" alt="Pet"></div>
+        <div class="info-pet">
+          <h4 id="titulo-atividades-pet">Atividades do dia</h4>
+          <p id="subtitulo-atividades-pet"></p>
+        </div>
+      </div>
+      <label style="font-size:13.5px;font-weight:600;display:block;margin-bottom:8px;">Atividades programadas</label>
+      <div id="lista-atividades-formulario" style="margin-bottom:18px;"></div>
+      <label style="font-size:13.5px;font-weight:600;display:block;margin-bottom:8px;">Incluir nova atividade</label>
+      <div class="linha-nova-atividade">
+        <div>
+          <label style="font-size:11.5px;color:var(--cor-texto-secundario);">Descrição da atividade</label>
+          <input id="descricao-nova-atividade" class="input-padrao" type="text" placeholder="Ex.: Escovação e cuidados">
+        </div>
+        <div>
+          <label style="font-size:11.5px;color:var(--cor-texto-secundario);">Horário</label>
+          <input id="horario-nova-atividade" class="input-padrao" type="time" value="16:00">
+        </div>
+      </div>
+      <button type="button" class="botao-primario" style="margin-bottom:14px;" onclick="adicionarAtividade()">+ Adicionar atividade</button>
+      <button type="button" class="botao-secundario" onclick="salvarAtividades()">Salvar e voltar à agenda</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/armazenamento.js"></script>
+<script src="../js/aplicativo.js"></script>
+<script>iniciarPaginaAtividades();</script>
+</body>
+</html>
